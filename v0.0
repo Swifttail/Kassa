@@ -1,0 +1,23 @@
+def main():
+    cic = str("да")
+    while cic == "да" or cic == "yes":
+        total = 0
+        nametemp = str(input("Как зовут клиента? "))
+        purch = int(input("Сколько покупок у клиента? "))
+        name = nametemp.lower()
+        if name == "захар":
+          disc=0.95
+        elif name == "алла":
+          disc=0.9
+        else:
+          disc=1 
+        for x in range(purch):
+            cena = float(input("Введите цену товара "))
+            total += cena
+        total=total*disc
+        print('Цена всех товаров составляет', 
+        format(total, '.2f'))
+        print("Приходите ещё!")
+        cictemp = input('Снова? ')
+        cic = cictemp.lower()
+main()
